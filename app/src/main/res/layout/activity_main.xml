@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F2F8"
+    tools:context="com.example.activity.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/top_bar_bg"
+        app:title="小新"
+        android:layout_alignParentTop="true"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/Theme.AppCompat.Light"/>
+
+    <ListView
+        android:id="@+id/list_chat_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar"
+        android:layout_above="@+id/bottom_bar"
+        android:divider="@null"
+        android:dividerHeight="4dp"/>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <EditText
+            android:id="@+id/et_message_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="36dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/edit_msg_bg"/>
+
+        <Button
+            android:id="@+id/btn_send_request"
+            android:layout_width="56dp"
+            android:layout_height="40dp"
+            android:minHeight="0dp"
+            android:maxLines="1"
+            android:background="@drawable/btn_sended"
+            android:textColor="#FFFFFF"
+            android:text="发送"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
